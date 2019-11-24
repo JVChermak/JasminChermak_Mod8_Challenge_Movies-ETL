@@ -40,4 +40,6 @@ Competing data:
 | Production company(s) | production_companies | Kaggle more consistent, Drop Wiki |
 
   - I am assuming that future data will follow similar patterns of Kaggle having more consistency and wiki being able to fill in the gaps.
-6. Merging the movies_df and rating_counts with a left join will involve missing values because not all movies are rated.  
+6. Merging the movies_df and rating_counts with a left join will involve missing values because not all movies are rated.
+7. The function will be ran using the format shown at the end of the code.
+ - I assumed that the files used will be entered in as shown where the function is called.
