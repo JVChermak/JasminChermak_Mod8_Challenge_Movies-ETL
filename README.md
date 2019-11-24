@@ -28,17 +28,16 @@ In order to automate the ETL pipeline, several assumptions are made about any fu
 5. For the competing data in the Wiki and MovieLens data sets, the competing data will follow the same pattern as in the initial cleaning.
 
 Competing data:
-Wiki                     MovieLens                  Resolution
------------------------------------------------------------------------------
-title_wiki               title_kaggle               Kaggle more consistent, Drop Wiki
-running_time             runtime                    Keep Kaggle, fill in zeros with Wiki
-budget_wiki              budget_kaggle              Keep Kaggle, fill in zeros with Wiki
-box_office               revenue                    Keep Kaggle, fill in zeros with Wiki
-release_date_wiki        release_date_kaggle        Kaggle complete, Drop Wiki
-Language                 original_language          Kaggle more consistent, Drop Wiki
-Production company(s)    production_companies       Kaggle more consistent, Drop Wiki
 
-  - After looking at several columns that had competing data, decisions were made to remove the Wiki data for titles, release date, language, and production company.
-  - The wiki data was used to fill in missing pieces in the Kaggle data for run time, budget and revenue.
+| Wiki | MovieLens | Resolution
+| --- | --- | --- |
+| title_wiki | title_kaggle | Kaggle more consistent, Drop Wiki |
+| running_time | runtime | Keep Kaggle, fill in zeros with Wiki |
+| budget_wiki | budget_kaggle | Keep Kaggle, fill in zeros with Wiki |
+| box_office | revenue | Keep Kaggle, fill in zeros with Wiki |
+| release_date_wiki | release_date_kaggle | Kaggle complete, Drop Wiki |
+| Language | original_language | Kaggle more consistent, Drop Wiki |
+| Production company(s) | production_companies | Kaggle more consistent, Drop Wiki |
+
   - I am assuming that future data will follow similar patterns of Kaggle having more consistency and wiki being able to fill in the gaps.
 6. Merging the movies_df and rating_counts with a left join will involve missing values because not all movies are rated.  
